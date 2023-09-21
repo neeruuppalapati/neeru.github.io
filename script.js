@@ -13,7 +13,7 @@ function typeWriter() {
 }
 
 function typeWriter2() {
-  var text = "Math and Computer Science at the University of Michigan〽️";
+  var text = "Math/Naval Architecture/Computer Science at the University of Michigan〽️";
   var j = 0;
   var speed2 = 30; //typing speed in milliseconds for second animation
 
