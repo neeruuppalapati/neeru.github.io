@@ -39,7 +39,6 @@ body {
   }
 
   #about {
-    /* surround the word gay with a rectangular bubble */
     border-radius: 50px;
     /* change the color of the circle */
     color: #00274c;
@@ -64,7 +63,6 @@ body {
   }
 
   #blog {
-    /* surround the word gay with a rectangular bubble */
     /* shift the text to the right slightly */
 
     border-radius: 50px;
@@ -91,7 +89,6 @@ body {
   }
 
   #problems {
-    /* surround the word gay with a rectangular bubble */
     border-radius: 50px;
     /* change the color of the circle */
     color: #00274c;
