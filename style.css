@@ -6,26 +6,32 @@ body {
 
 .container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
+    height: 100vh; /* Full viewport height */
+}
+
+.image {
+    flex: 1; /* Takes half the screen (50%) */
+    max-width: 50%; /* Ensures it doesn't exceed 50% */
+    overflow: hidden; /* Prevents any overflow from large images */
 }
 
 .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire space */
 }
 
 .text {
-    max-width: 600px;
-    margin-left: 20px;
+    flex: 1; /* Takes the other half of the screen (50%) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .text h1 {
-    margin-top: 0;
+    margin: 0;
 }
 
 .text p {
@@ -35,10 +41,14 @@ body {
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
-        text-align: center;
+    }
+
+    .image {
+        max-width: 100%;
+        height: 50vh; /* Adjusts the image height for mobile view */
     }
 
     .text {
-        margin-left: 0;
+        padding: 10px;
     }
 }
