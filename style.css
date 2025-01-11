@@ -36,7 +36,8 @@ body {
 
 .text p {
     line-height: 1.6;
-    padding-left: 2em;
+    margin-top: 10px;
+    padding-left: 2em; /* Indents all lines */
 }
 
 @media screen and (max-width: 768px) {
