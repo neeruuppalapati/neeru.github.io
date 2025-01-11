@@ -1,44 +1,41 @@
 /* styles.css */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif; 
+    font-family: Arial, sans-serif;
 }
 
 .container {
     display: flex;
-    height: 100vh; 
+    height: 100vh; /* Full viewport height */
 }
 
 .image {
-    flex: 1; 
-    max-width: 50%;
-    overflow: hidden; 
+    flex: 1; /* Takes half the screen (50%) */
+    max-width: 50%; /* Ensures it doesn't exceed 50% */
+    overflow: hidden; /* Prevents any overflow from large images */
 }
 
 .image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover; /* Ensures the image covers the entire space */
 }
 
 .text {
-    flex: 1;
+    flex: 1; /* Takes the other half of the screen (50%) */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: left;
     padding: 20px;
-    text-align: left; 
 }
 
 .text h1 {
     margin: 0;
-    font-weight: 300;
 }
 
 .text p {
     line-height: 1.6;
-    margin-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -48,7 +45,7 @@ body {
 
     .image {
         max-width: 100%;
-        height: 50vh; 
+        height: 50vh; /* Adjusts the image height for mobile view */
     }
 
     .text {
