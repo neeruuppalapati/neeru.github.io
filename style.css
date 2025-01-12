@@ -41,7 +41,7 @@ body {
 
 .text p {
     margin-left: 2em; /* Indents all lines */
-    margin-right: 6em; /* Optional: Adds symmetry on both sides */
+    margin-right: 4em; /* Optional: Adds symmetry on both sides */
 }
 .social-links {
     margin-top: 20px; /* Space above the social links */
