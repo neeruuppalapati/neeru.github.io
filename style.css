@@ -11,7 +11,8 @@ body {
 
 .image {
     flex: 1; /* Takes half the screen (50%) */
-    max-width: 65%; /* Ensures it doesn't exceed 50% */
+    min-width: 55%;
+    max-width: 55%; /* Ensures it doesn't exceed 50% */
     overflow: hidden; /* Prevents any overflow from large images */
 }
 
@@ -34,13 +35,29 @@ body {
     font-style: italic;
     font-weight: 300;
     margin: 0;
-    margin-left: 2em;
-    margin-right: 4em;
+    margin-left: 1em;
+    margin-right: 2em;
 }
 
 .text p {
     margin-left: 2em; /* Indents all lines */
-    margin-right: 4em; /* Optional: Adds symmetry on both sides */
+    margin-right: 6em; /* Optional: Adds symmetry on both sides */
+}
+.social-links {
+    margin-top: 20px; /* Space above the social links */
+    display: flex;
+    gap: 15px; /* Space between the icons */
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+.social-icon {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
 }
 
 @media screen and (max-width: 768px) {
