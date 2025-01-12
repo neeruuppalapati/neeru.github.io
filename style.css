@@ -11,7 +11,7 @@ body {
 
 .image {
     flex: 1; /* Takes half the screen (50%) */
-    max-width: 50%; /* Ensures it doesn't exceed 50% */
+    max-width: 65%; /* Ensures it doesn't exceed 50% */
     overflow: hidden; /* Prevents any overflow from large images */
 }
 
@@ -31,12 +31,16 @@ body {
 }
 
 .text h1 {
+    font-style: italic;
+    font-weight: 300;
     margin: 0;
+    margin-left: 2em;
+    margin-right: 4em;
 }
 
 .text p {
     margin-left: 2em; /* Indents all lines */
-    margin-right: 2em; /* Optional: Adds symmetry on both sides */
+    margin-right: 4em; /* Optional: Adds symmetry on both sides */
 }
 
 @media screen and (max-width: 768px) {
