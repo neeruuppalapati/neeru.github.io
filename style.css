@@ -44,7 +44,7 @@ body {
     margin-right: 4em; /* Optional: Adds symmetry on both sides */
 }
 .social-links {
-    margin-left: 2em;
+    margin-left: 20px;
     margin-top: 20px; /* Space above the social links */
     display: flex;
     gap: 15px; /* Space between the icons */
