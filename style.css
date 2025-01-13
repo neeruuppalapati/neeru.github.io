@@ -51,7 +51,7 @@ body {
 }
 
 .social-icon {
-    width: 40px; /* Adjust the size of the icons */
+    width: 50px; /* Adjust the size of the icons */
     height: 40px;
     transition: transform 0.2s; /* Smooth hover effect */
 }
