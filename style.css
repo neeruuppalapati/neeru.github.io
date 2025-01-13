@@ -310,7 +310,7 @@ body {
     background-color: white;
     border-radius: 12px;
     /* make the box wider */
-    max-width: 50vw;
+    max-width: 100vw;
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
