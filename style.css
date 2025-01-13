@@ -11,8 +11,8 @@ body {
 
 .image {
     flex: 1; /* Takes half the screen (50%) */
-    min-width: 55%;
-    max-width: 55%; /* Ensures it doesn't exceed 50% */
+    min-width: 50%;
+    max-width: 50%; /* Ensures it doesn't exceed 50% */
     overflow: hidden; /* Prevents any overflow from large images */
 }
 
@@ -44,6 +44,7 @@ body {
     margin-right: 4em; /* Optional: Adds symmetry on both sides */
 }
 .social-links {
+    margin-left: 2em;
     margin-top: 20px; /* Space above the social links */
     display: flex;
     gap: 15px; /* Space between the icons */
