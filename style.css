@@ -310,6 +310,7 @@ body {
     background-color: white;
     border-radius: 12px;
     /* make the box wider */
+    min-width:100vw;
     max-width: 100vw;
   }
   
