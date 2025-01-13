@@ -1,0 +1,76 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+.image {
+    flex: 1; /* Takes half the screen (50%) */
+    min-width: 50%;
+    max-width: 50%; /* Ensures it doesn't exceed 50% */
+    overflow: hidden; /* Prevents any overflow from large images */
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire space */
+}
+
+.text {
+    flex: 1; /* Takes the other half of the screen (50%) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 20px;
+}
+
+.text h1 {
+    font-style: italic;
+    font-weight: 300;
+    margin: 0;
+    margin-left: 1em;
+    margin-right: 2em;
+}
+
+.text p {
+    margin-left: 2em; /* Indents all lines */
+    margin-right: 4em; /* Optional: Adds symmetry on both sides */
+}
+.social-links {
+    margin-top: 20px; /* Space above the social links */
+    display: flex;
+    gap: 15px; /* Space between the icons */
+    margin-left: 2em;
+}
+
+.social-icon {
+    width: 50px; /* Adjust the size of the icons */
+    height: 40px;
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image {
+        max-width: 100%;
+        height: 50vh; /* Adjusts the image height for mobile view */
+    }
+
+    .text {
+        padding: 10px;
+    }
+}
