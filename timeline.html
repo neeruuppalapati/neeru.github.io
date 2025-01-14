@@ -1,106 +1,95 @@
-<!-- say nothing here yet! -->
 <!DOCTYPE html>
-<!-- just text that says nothing here yet -->
+<html lang="en">
 <head>
-    <title>Blog</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #ccc;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin: 10px 0;
+      width: 50%;
+    }
+
+    .timeline-item.left {
+      left: 0;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 15px;
+      border: 10px solid transparent;
+    }
+
+    .timeline-item.left::after {
+      left: 100%;
+      border-left-color: #f9f9f9;
+    }
+
+    .timeline-item.right::after {
+      right: 100%;
+      border-right-color: #f9f9f9;
+    }
+
+    .add-item {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-item:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="index">
-            <h1 id="about">About</h1>
-        </a>
-    </header>
-    <header>
-        <a href="blog">
-            <h1 id="blog">Blog</h1>
-        </a>
-    </header>
-    <header>
-        <a href="problems">
-            <h1 id="problems"> &nbsp;Problems I have Solved Recently</h1>
-        </a> 
-        <header> 
-<div class ="parent">
-                        <div class="timeline">
-                            <div class="container left">
-                            <div class="content">
-                                <h2>2017-2021: Walled Lake Central</h2>
-                                <p>Foundational Years</p>
-                            </div>
-                            </div>
-                            <div class="container left">
-                            <div class="content">
-                                <h2>Fall 2021 - First Semester at Michigan</h2>
-                                <p>Entered Ross as Business and Math dual major <br> Linear Algebra, Econ 101, Joined MHACKS</p>
-                            </div>
-                            </div>
-                            <div class="container left">
-                                <div class="content">
-                                <h2>Winter 2022 - First Time Programming</h2>
-                                <p> Elementary Programming Concepts, Discrete Mathematics <br><br> Joined MProduct, Became MHACKS Sponsorship Director<br> Dropped Math for Computer Science </p>
-                                </div>
-                            </div>
-                            <div class="container right">
-                                <div class="content">
-                                <h2>Summer 2022 - Wipro</h2>
-                                <p>Software Engineer Intern @ Wipro <br> Programming and Intro Data Structures </p>
-                                </div>
-                            </div>
-                            <div class="container left">
-                                <div class="content">
-                                <h2>Fall 2022 - Computer Science!</h2>
-                                <p>Software Engineer @ MoodMe, AI Startup <br> Data Structures and Algorithms, Theory of Computation, Probability </p>
-                                </div>
-                            </div>
-                            <div class="container left">
-                                <div class="content">
-                                <h2>Winter 2023 - Hell</h2>
-                                <p>Computer Architecture, Managerial Accounting <br> Machine Learning, Advanced Algorithms <br> <br> Joined Michigan Investment Group<br>Dropped Business for Math</p>
-                                </div>
-                            </div>
-                            <div class="container right">
-                                <div class="content">
-                                <h2>Summer 2023 - BNY</h2>
-                                <p>Software Engineer Intern @ Bank of New York Mellon <br> Introduction to Combinatorics</p>
-                                </div>
-                            </div>
-                            <div class="container left">
-                                <div class="content">
-                                <h2>Fall 2023 - Ragmester</h2>
-                                <p>Operating Systems, Theory of Network Design, Real Analysis, Numerical Analysis, Cryptography</p>
-                                </div>
-                            </div>
-                            <div class="container left">
-                                <div class="content">
-                                <h2>Winter 2024 - Escape from Mud</h2>
-                                <p>Topology, Discrete Stochastic Processes</p>
-                                </div>
-                            </div>
-                            <div class="container right">
-                                <div class="content">
-                                <h2>Summer 2024 - SoFi</h2>
-                                <p>Software Engineer Intern @ SoFi Technologies</p>
-                                </div>
-                            </div>
-                            <div class="container left">
-                                <div class="content">
-                                <h2>Fall 2024 - Journey To Faith</h2>
-                                <p>Algebra 1, Mathematical Logic <br> President of Michigan Investment Group</p>
-                                </div>
-                            </div>
-                            <div class="container right">
-                                <div class="content">
-                                <h2>Summer 2025 - Roblox </h2>
-                                <p>Incoming Software Engineer Intern @ Roblox</p>
-                                </div>
-                            </div>
-                            <div class="container right">
-                                <div class="content">
-                                <h2>Fall 2025 - IMC Trading </h2>
-                                <p>Incoming Software Engineer @ IMC Trading</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <h1>My Career Timeline</h1>
+  <div class="timeline" id="timeline">
+    <div class="timeline-item left">Started University - 2018</div>
+    <div class="timeline-item right">Internship at XYZ - 2020</div>
+    <div class="timeline-item left">Graduated - 2022</div>
+    <div class="timeline-item right">Joined IMC Trading - 2024</div>
+  </div>
 </body>
+</html>
