@@ -1,35 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .timeline {
+      display: none;
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #ccc;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin: 10px 0;
+      width: 50%;
+    }
+
+    .timeline-item.left {
+      left: 0;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 15px;
+      border: 10px solid transparent;
+    }
+
+    .timeline-item.left::after {
+      left: 100%;
+      border-left-color: #f9f9f9;
+    }
+
+    .timeline-item.right::after {
+      right: 100%;
+      border-right-color: #f9f9f9;
+    }
+
+    .timeline-toggle {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .timeline-toggle:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="image">
-            <img src="rodle3.jpg" alt="Photo Error!">
-        </div>
-        <div class="text">
-            <h1>Neeru Uppalapati</h1>
-            <p><br><br>I write ultra low latency C++ at IMC. I studied pure math and computer science at the University of 〽️ichigan. I like to run, rock climb, and play tennis. Feel free to reach out!</p>
-            <div class="social-links">
-                <a href="https://instagram.com/neeruuppalapati" target="_blank">
-                    <img src="assets/instagram_c.png" alt="Instagram" class="social-icon">
-                </a>
-                <a href="https://www.linkedin.com/in/neerad-uppalapati" target="_blank">
-                    <img src="assets/linkedin_color.png" alt="LinkedIn" class="social-icon">
-                </a>
-                <a href="https://twitter.com/neeroodle" target="_blank">
-                    <img src="assets/twitter_c.png" alt="Twitter" class="social-icon">
-                </a>
-                <a href="https://github.com/neeruuppalapati" target="_blank">
-                    <img src="assets/github.png" alt="GitHub" class="social-icon">
-                </a>
-            </div>
-        </div>
-        
+  <div class="container">
+    <div class="image">
+      <img src="rodle3.jpg" alt="Photo Error!">
     </div>
+    <div class="text">
+      <h1>Neeru Uppalapati</h1>
+      <p><br><br>I write ultra low latency C++ at IMC. I studied pure math and computer science at the University of 〽️ichigan. I like to run, rock climb, and play tennis. Feel free to reach out!</p>
+      <div class="social-links">
+        <a href="https://instagram.com/neeruuppalapati" target="_blank">
+          <img src="assets/instagram_c.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/neerad-uppalapati" target="_blank">
+          <img src="assets/linkedin_color.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://twitter.com/neeroodle" target="_blank">
+          <img src="assets/twitter_c.png" alt="Twitter" class="social-icon">
+        </a>
+        <a href="https://github.com/neeruuppalapati" target="_blank">
+          <img src="assets/github.png" alt="GitHub" class="social-icon">
+        </a>
+      </div>
+      <button class="timeline-toggle" onclick="toggleTimeline()">View Timeline</button>
+    </div>
+  </div>
+  <div class="timeline" id="timeline">
+    <div class="timeline-item left">Started University - 2018</div>
+    <div class="timeline-item right">Internship at XYZ - 2020</div>
+    <div class="timeline-item left">Graduated - 2022</div>
+    <div class="timeline-item right">Joined IMC Trading - 2024</div>
+  </div>
+
+  <script>
+    function toggleTimeline() {
+      const timeline = document.getElementById('timeline');
+      if (timeline.style.display === 'none' || timeline.style.display === '') {
+        timeline.style.display = 'block';
+      } else {
+        timeline.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
