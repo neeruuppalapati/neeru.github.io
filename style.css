@@ -9,8 +9,8 @@ body {
   }
 
   #instagram {
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     position: relative;
   }
 
@@ -21,20 +21,20 @@ body {
   }
 
   #github {
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     position: relative;
   }
 
   #twitter {
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     position: relative;
   }
 
   #linkedin {
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     position: relative;
   }
 
@@ -88,13 +88,13 @@ body {
     left: 40%;
   }
 
-  #problems {
+  #c_timeline {
     border-radius: 50px;
     /* change the color of the circle */
     color: #00274c;
     /* change the size of the circle */
     background-color: #FFCB05;
-    width: 20vw;
+    width: 11vw;
     height: 2vw;
     /* change the font of the word */
     font-family: 'JetBrains Mono', monospace;
@@ -116,6 +116,7 @@ body {
   #name {
     text-align: center;
     font-size: 3.5vw;
+    /* font-style: italic; */
     /* font-size: 72px; */
     /*  make font jetbrains mono */
     font-family: 'JetBrains Mono', monospace; /*change font to your preference*/
@@ -141,6 +142,7 @@ body {
     text-align: center;
     font-size: 24px;
     font-size: 1.24vw;
+    font-style:italic;
     /*  make font jetbrains mono */
     font-family: 'JetBrains Mono', monospace; /*change font to your preference*/
     color: hwb(0 5% 95%); /*change color to your preference*/
@@ -211,17 +213,18 @@ body {
 
   .parent {
     position: relative;
-    top: 50%;
+    top: 0%;
   }
   .timeline {
-    /* want to position the timeline right below fade */
     position: absolute;
-    top: 60%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     max-width: 40vw;
     margin: 0 auto;
   }
+
+
   
   /* The actual timeline (the vertical ruler) */
   .timeline::after {
@@ -242,6 +245,13 @@ body {
     background-color: inherit;
     width: 100%;
   }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+
   
   /* The circles on the timeline */
   .container::after {

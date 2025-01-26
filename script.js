@@ -8,14 +8,15 @@ function typeWriter() {
     i++;
     setTimeout(typeWriter, speed);
   } else {
-    setTimeout(typeWriter2, 1000); //wait for 1 second before starting second typing animation
+    // setTimeout(typeWriter2, 0); //wait for 1 second before starting second typing animation
   }
 }
 
 function typeWriter2() {
-  var text = "Pure Math and Computer Science at the University of Michigan〽️";
+  var text = "Engineering @ IMC Trading";
+  // 〽️
   var j = 0;
-  var speed2 = 30; //typing speed in milliseconds for second animation
+  var speed2 = 35; //typing speed in milliseconds for second animation
 
   function typeWriterHelper() {
     if (j < text.length) {
@@ -29,6 +30,6 @@ function typeWriter2() {
 }
 
 
-window.onload = typeWriter;
+window.onload = function() { typeWriter(), typeWriter2()};
 
 
