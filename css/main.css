@@ -1,0 +1,226 @@
+/* /css/main.css */
+
+/* Box-sizing to include padding and borders in width and height calculations */
+* {
+  box-sizing: border-box;
+}
+
+/* Import component-specific styles */
+@import url('header.css');
+
+/* General Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Start from top */
+  min-height: 100vh; /* Allow content to extend */
+  margin: 0;
+  background-color: #add8e6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Common Styles for Social Icons */
+.social-icons {
+  display: flex;
+  gap: 1rem; /* Space between icons */
+  margin-top: 2rem; /* Space above icons */
+}
+
+.social-icons img {
+  width: 3vw;
+  height: 3vw;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Typing Animation for #name */
+#name {
+  text-align: center;
+  font-size: 3.5vw;
+  color: hwb(0 5% 95%);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid #FFF; /* Caret */
+  animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+  margin: 2rem 0 1rem 0; /* Space above and below name */
+}
+
+/* Keyframes for Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Keyframes for Blinking Caret */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #FFF; }
+}
+
+/* Styles for #study */
+#study {
+  text-align: center;
+  font-size: 1.24vw;
+  font-style: italic;
+  color: hwb(0 5% 95%);
+  white-space: nowrap;
+  overflow: hidden;
+  /* Removed border-right and animations */
+  margin-bottom: 2rem; /* Space below study */
+}
+
+/* Timeline Styles */
+
+/* Container for the timeline */
+.timeline {
+  position: relative; /* Changed from absolute to relative */
+  max-width: 40vw;
+  margin: 2rem auto; /* Added top margin for spacing */
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #00274c;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around timeline content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #FFCB05;
+  border: 4px solid #00274c;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: -50%;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  /* center the content */
+  text-align: center;
+  /* make it so that when I insert content, the webpage is unchanged */
+  position: relative;
+  padding: 20px 30px;
+  background-color: white;
+  border-radius: 12px;
+  /* make the box wider */
+  min-width:25vw;
+  max-width: 50vw;
+}
+
+/* Page Title Styling */
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: #00274c;
+}
+
+/* Adjust the "Timeline" Bubble in the Header */
+.nav-bubble--large {
+  width: 6vw;          /* Increased width */
+  height: 3vw;         /* Increased height */
+  font-size: 1.5vw;    /* Increased font size */
+}
+
+/* Hover Effects for Larger Bubble */
+.nav-bubble--large:hover {
+  transform: scale(1.1); /* Slightly more enlargement on hover */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+  /* Adjust navigation bubbles */
+  .nav-bubble {
+      width: 12vw;
+      height: 6vw;
+      font-size: 2vw;
+  }
+  
+  .nav-bubble--large {
+      width: 18vw;
+      height: 9vw;
+      font-size: 3vw;
+  }
+  
+  /* Adjust timeline content for smaller screens */
+  .timeline {
+      max-width: 80vw;
+  }
+
+  .content {
+      min-width: 20vw;
+      max-width: 60vw;
+  }
+}

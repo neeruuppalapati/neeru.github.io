@@ -1,0 +1,44 @@
+/* /css/header.css */
+
+/* Header Container */
+header {
+    width: 100%;
+    background-color: transparent; /* Change if you want a different background */
+    padding: 1rem 0; /* Add some padding for spacing */
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between navigation links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    width: 5vw;
+    height: 2vw;
+  }
+  
+  /* Navigation Links */
+  nav a {
+    text-decoration: none;
+  }
+  
+  /* Bubble Styles for Navigation Links */
+  nav .nav-bubble {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background-color: #FFCB05; /* Bubble background color */
+    color: #00274c; /* Bubble text color */
+    width: 5vw;
+    font-size: 1vw;
+    font-family: 'JetBrains Mono', monospace;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  /* Hover Effects for Bubbles */
+  nav .nav-bubble:hover {
+    background-color: #00274c; /* Bubble hover background color */
+    color: #FFCB05; /* Bubble hover text color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  

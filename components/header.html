@@ -1,0 +1,88 @@
+<!-- /components/header.html -->
+<header>
+    <style>
+      /* Header Container */
+      header {
+        width: 100%;
+        background-color: transparent;
+        padding: 1rem 0;
+      }
+      
+      /* Navigation Bar */
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      
+      /* Navigation Links */
+      nav a {
+        text-decoration: none; /* Remove underline from links */
+      }
+      
+      /* Bubble Styles for Navigation Links */
+      nav .nav-bubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        background-color: #FFCB05; /* Bubble background color */
+        color: #00274c;            /* Bubble text color */
+        width: 4vw;
+        height: 2vw;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1vw;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      }
+      
+      /* Hover Effects for Bubbles */
+      nav .nav-bubble:hover {
+        background-color: #00274c; /* Bubble hover background color */
+        color: #FFCB05;            /* Bubble hover text color */
+        transform: scale(1.05);    /* Slightly enlarge on hover */
+      }
+  
+      /* Specific Styles for Larger Bubble */
+      nav .nav-bubble--large {
+        width: 6vw;          /* Increased width */
+        height: 2vw;         /* Increased height */
+        font-size: 1vw;    /* Increased font size */
+      }
+      
+      /* Hover Effects for Larger Bubble */
+      nav .nav-bubble--large:hover {
+        transform: scale(1.1); /* Slightly more enlargement on hover */
+      }
+      
+      /* Responsive Adjustments */
+      @media screen and (max-width: 600px) {
+        nav .nav-bubble {
+          width: 12vw;
+          height: 6vw;
+          font-size: 2vw;
+        }
+        
+        /* Adjust larger bubble on small screens */
+        nav .nav-bubble--large {
+          width: 18vw;
+          height: 9vw;
+          font-size: 3vw;
+        }
+      }
+    </style>
+    
+    <nav>
+      <a href="index.html">
+        <div class="nav-bubble">About</div>
+      </a>
+      <a href="blog.html">
+        <div class="nav-bubble">Blog</div>
+      </a>
+      <a href="career-timeline.html">
+        <div class="nav-bubble nav-bubble--large">Timeline</div>
+      </a>
+    </nav>
+  </header>
+  
