@@ -15,7 +15,6 @@ const typeWriter = () => {
     // Remove caret after typing is complete
     document.getElementById("name").style.borderRight = 'none';
     // Start second typing animation
-    typeWriter2();
   }
 };
 
@@ -43,6 +42,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     // Start Typing Animation
     typeWriter();
+    typeWriter2();
   } catch (error) {
     console.error('Error during initialization:', error);
   }
