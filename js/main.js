@@ -19,7 +19,7 @@ const typeWriter = () => {
 };
 
 const typeWriter2 = () => {
-  const text = "Gardening (prev R&D @ IMC Trading)";
+  const text = "Gardening";
   let j = 0;
   const speed2 = 35; // Typing speed in milliseconds for second animation
 
