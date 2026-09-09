@@ -40,9 +40,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('header', 'components/header.html');
     initHeader();
 
-    // Start Typing Animation
-    typeWriter();
-    typeWriter2();
+    // Start Typing Animation (only on pages that have these elements)
+    if (document.getElementById("name")) typeWriter();
+    if (document.getElementById("study")) typeWriter2();
   } catch (error) {
     console.error('Error during initialization:', error);
   }

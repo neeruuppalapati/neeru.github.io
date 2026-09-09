@@ -208,6 +208,41 @@ a {
   transform: scale(1.1); /* Slightly more enlargement on hover */
 }
 
+/* Fitness Log Styles */
+
+/* Plain, text-like table: no card, no fills, just aligned monospace text */
+.fitness-log {
+  width: fit-content;
+  max-width: 90vw;
+  margin: 2rem auto;
+  overflow-x: auto; /* Scroll the table on narrow screens, not the page */
+}
+
+.fitness-log table {
+  border-collapse: collapse;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: hwb(0 5% 95%);
+}
+
+.fitness-log th,
+.fitness-log td {
+  padding: 0.4rem 2.5rem 0.4rem 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.fitness-log th:last-child,
+.fitness-log td:last-child {
+  padding-right: 0;
+}
+
+/* Single rule under the header row, like a text table */
+.fitness-log th {
+  font-weight: bold;
+  border-bottom: 1px solid hwb(0 5% 95%);
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 600px) {
   /* Adjust navigation bubbles */
