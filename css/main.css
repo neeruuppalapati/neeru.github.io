@@ -222,7 +222,7 @@ a {
   border-collapse: collapse;
   font-family: 'JetBrains Mono', monospace;
   font-size: 1rem;
-  color: hwb(0 5% 95%);
+  color: #0d0d0d;
 }
 
 .fitness-log th,
@@ -240,7 +240,7 @@ a {
 /* Single rule under the header row, like a text table */
 .fitness-log th {
   font-weight: bold;
-  border-bottom: 1px solid hwb(0 5% 95%);
+  border-bottom: 1px solid #0d0d0d;
 }
 
 /* Responsive Adjustments */

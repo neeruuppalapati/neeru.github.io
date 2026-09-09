@@ -21,17 +21,22 @@ const renderFitnessLog = () => {
   });
 
   // ISO dates sort correctly as strings. Newest first; ties keep list order.
-  const sorted = [...valid].sort((a, b) => b.date.localeCompare(a.date));
+  const sorted = valid.slice().sort((a, b) => b.date.localeCompare(a.date));
 
-  tbody.replaceChildren(...sorted.map(({ date, activity, duration }) => {
+  tbody.innerHTML = '';
+  for (const { date, activity, duration } of sorted) {
     const row = document.createElement('tr');
     for (const text of [formatDate(date), activity, duration]) {
       const cell = document.createElement('td');
       cell.textContent = text;
       row.appendChild(cell);
     }
-    return row;
-  }));
+    tbody.appendChild(row);
+  }
 };
 
-window.addEventListener('DOMContentLoaded', renderFitnessLog);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderFitnessLog);
+} else {
+  renderFitnessLog();
+}
