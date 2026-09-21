@@ -7,6 +7,7 @@
 //   activity: what you did
 //   duration: how long it took
 
+
 export const entries = [
   { date: '2026-09-04', activity: '5 mile run', duration: '40 minutes' },
   { date: '2026-09-04', activity: 'Climb',      duration: '2 hours' },
@@ -20,4 +21,10 @@ export const entries = [
   { date: '2026-09-14', activity: 'Back',       duration: '1 hour' },
   { date: '2026-09-15', activity: '6 mile run', duration: '50 minutes' },
   { date: '2026-09-15', activity: 'Climb',      duration: '1 hour' },
+  { date: '2026-09-16', activity: 'Tennis',     duration: '2 hours' },
+  { date: '2026-09-17', activity: 'Climb',      duration: '1.5 hours' },
+  { date: '2026-09-18', activity: 'Beer mile',  duration: '9:14' },
+  { date: '2026-09-19', activity: 'Basketball', duration: '1 hour' },
+  { date: '2026-09-20', activity: 'Climb',      duration: '2 hours' },
+  { date: '2026-09-20', activity: '4 mile run', duration: '36 minutes' },
 ];
