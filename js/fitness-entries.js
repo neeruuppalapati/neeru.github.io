@@ -38,5 +38,6 @@ export const entries = [
   { date: '2026-09-28', activity: 'Tennis',     duration: '2 hours' },
   { date: '2026-09-29', activity: 'Climb',      duration: '1.5 hours' },
   { date: '2026-09-29', activity: 'Soccer',     duration: '1 hour' },
-
+  { date: '2026-09-30', activity: 'Basketball', duration: '45 minutes' },
+  { date: '2026-09-30', activity: '5 mile run', duration: '38 minutes' },
 ];
