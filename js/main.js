@@ -19,7 +19,7 @@ const typeWriter = () => {
 };
 
 const typeWriter2 = () => {
-  const text = "Gardening";
+  const text = "Living";
   let j = 0;
   const speed2 = 35; // Typing speed in milliseconds for second animation
 
